@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" href="./assets/bi.png" type="image/png">
+     <!-- nohemi -->
+    <style>
+      /* AALTO */
+      @font-face {
+        font-family: "Aalto";
+        src: url("./assets/aalto.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .aalto-font {
+        font-family: "Aalto", serif;
+      }
+
+      /* NOHEMI FONT FAMILY */
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Thin.otf") format("opentype");
+        font-weight: 100;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-ExtraLight.otf") format("opentype");
+        font-weight: 200;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Light.otf") format("opentype");
+        font-weight: 300;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Regular.otf") format("opentype");
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Medium.otf") format("opentype");
+        font-weight: 500;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-SemiBold.otf") format("opentype");
+        font-weight: 600;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Bold.otf") format("opentype");
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-ExtraBold.otf") format("opentype");
+        font-weight: 800;
+      }
+
+      @font-face {
+        font-family: "Nohemi";
+        src: url("./assets/Nohemi/Nohemi-Black.otf") format("opentype");
+        font-weight: 900;
+      }
+
+      .nohemi-font {
+        font-family: "Nohemi", sans-serif;
+      }
+    </style>
+    <!-- nohemi end -->
+  </head>
+  <body class="text-white nohemi-font">
+    <div
+      class="h-screen w-full flex items-center justify-center bg-[url('./assets/1.webp')] bg-cover bg-center"
+    >
+      <div
+        class="box w-[450px] h-[500px] bg-purple-800/20 border-[1px] border-white rounded-3xl flex flex-col p-10"
+      >
+        <div class="flex gap-1">
+          <input
+            type="text"
+            placeholder="Search"
+            class="flex-1 border py-2 px-4 rounded-full focus:outline-none"
+          />
+
+          <button
+            class="border p-3 rounded-full px-4 hover:bg-white/17 transition-all duration-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div
+          class="flex-10 flex flex-col items-center justify-center gap-2 cursor-default"
+        >
+          <div>
+            <p class="text-8xl mb-2"><i class=" iconic fa-solid fa-cloud-moon"></i></p>
+          </div>
+          <h1 class="text-6xl font-light"><span class="temp">24</span>°C</h1>
+          <h2 class="text-2xl text-center font-light">
+            <span class="city">New Delhi</span>
+            <span>,</span>
+            <span class="country">India</span>
+          </h2>
+        </div>
+        <div class="flex justify-between cursor-default">
+          <div class="flex items-center gap-x-3">
+            <i class="fa-solid fa-water text-3xl"></i>
+            <div>
+              <h1 class="font-semibold text-lg">
+                <span class="humidity">64</span>%
+              </h1>
+              <h2 class="font-extralight">Humidity</h2>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-x-3">
+            <i class="fa-solid fa-wind text-3xl"></i>
+            <div>
+              <h1 class="font-semibold text-lg">
+                <span class="wind">14</span> km/h
+              </h1>
+              <h2 class="font-extralight">Wind Speed</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
